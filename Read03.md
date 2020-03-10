@@ -24,11 +24,11 @@
 1. **Helpers**
 -  **JavaScript functions** that you can call from your templates, and help you __reuse code__ and __create complex templates__.
 - To call a helper, just use it as an expression - __{{helpername}}__.
-- (registerHelper function)[http://handlebarsjs.com/]
+- [registerHelper function](http://handlebarsjs.com/)
 
 1. **Block helpers**
 - have an opening and a closing tag (like the __#if__ and __#each__ built-ins)
 
 ## A Complete Guide to Flexbox
-(open here)[https://css-tricks.com/snippets/css/a-guide-to-flexbox/]
-(try)[https://flexboxfroggy.com/]
+[open here](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+[try](https://flexboxfroggy.com/)
