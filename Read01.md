@@ -1,3 +1,44 @@
+# SMACSS and Responsive Web Design
+
+### Responsive Web Design
+__Responsive web design is the practice of building a website suitable to work on every device and every screen size, no matter how large or small, mobile or desktop.__
+
+(Ethan Marcotte book)[https://abookapart.com/products/responsive-web-design]
+
+**Responsive** vs. **Adaptive** vs. **Mobile**
+- _Responsive_ generally means to react quickly and positively to any change.
+    - websites __continually__ and __fluidly__ change based on different factors, such as :
+        - __viewport__.
+        - __width__.
+- _adaptive_ means to be easily modified for a new purpose or situation.
+    -  built to a group of preset factors.
+- _Mobile_ means to build a separate website commonly on a new domain solely for mobile users.
+
+Currently the most popular **technique** lies within **responsive web design**, favoring design that dynamically adapts to different browser and device viewports, changing layout and content along the way. This solution has the benefits of being all three, **responsive**, **adaptive**, and **mobile**.
+
+### Responsive web design is broken down into three main components:
+1. Flexible Layouts
+    - the practice of building the layout of a website with a **flexible grid**
+    - capable of dynamically resizing to any width. 
+        - **Flexible grids** are built using relative length units(percentages **%** or **em**). These relative lengths are then used to declare common grid property values such as **width**, **margin**, or **padding**.
+1. media queries
+    - an **extension** to media types commonly found when targeting and including styles. 
+    - ```@media all and (min-width: 800px) and (max-width: 1024px) {...}```
+    - **mobile first**
+    - **Viewport**
+        - Viewport Height & Width  ```<meta name="viewport" content="width=device-width">```
+        - Viewport Scale ```<meta name="viewport" content="initial-scale=2">```
+
+1. flexible media
+    -  Images, videos, and other media types need to be scalable, changing their size as the size of the viewport changes.
+    - using the **max-width** property.
+    **Flexible Embedded Media**
+    - the embedded element needs to be **absolutely** positioned within **a parent element**.
+    - The **parent** element needs to have a **width of 100%** so that it may scale based on the width of the viewport.
+    - the parent element also needs to have a **height of 0** to trigger the hasLayout mechanism within Internet Explorer.
+
+(Responsive Web Design)[https://alistapart.com/article/responsive-web-design/]
+
 # Intro to SMACSS
 ### Scalable and Modular Architecture for CSS A flexible guide to developing sites small and large.
 
@@ -101,4 +142,5 @@ __Summary__
     - Apply to hover state, before or after clicking on a link, focus and blur effects
     - Pseudo-classes and pseudo-elements should be included here
 - **theme.css** should contain small changes on top of all other normal styling
-    - Applying temporary changes, such as a holiday theme
+    - Applying temporary changes, such as a holiday theme.
+    
