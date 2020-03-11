@@ -24,7 +24,7 @@ __Skim__
         • Fade elements into I out of view
         • Handle Ajax requests
 1. chaining of methods __Once you have selected· some elements, this allows you to apply multiple methods to the same selection__
- ![jQuery select elements](img/jQueryselectelements.png"title")
+ ![jQuery select elements](jQueryselectelements.png)
 
 
 
