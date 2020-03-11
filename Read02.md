@@ -2,7 +2,7 @@
 **"Write less, do more,"**
 
 __Readings__
-- JavaScript and jQuery book by Jon Duckett **pages 293-301, 306-331 and 354-357**
+- JavaScript and jQuery book by Jon Duckett **pages 293-301** __306-331 and 354-357__
 - [6 Reasons for Pair Programming](https://www.codefellows.org/blog/6-reasons-for-pair-programming/)
 
 __Skim__
@@ -24,9 +24,16 @@ __Skim__
         • Fade elements into I out of view
         • Handle Ajax requests
 1. chaining of methods __Once you have selected· some elements, this allows you to apply multiple methods to the same selection__
- ![jQuery select elements](jQueryselectelements.png)
 
+![jQuery select elements](img/jQueryselectelements.png)
 
+![Conten Filter](img/contentFilter.png)
+
+DOING THINGS WITH YOUR SELECTION
+![Do with selection](img/doing.png)
+
+Once you have selected the elements you want to work with (and they are in a jQuery object), the jQuery methods listed on these two pages perform tasks on those elements.
+![Methods](img/methods.png)
 
 ### 6 Reasons for Pair Programming
 1. Greater efficiency
