@@ -12,6 +12,7 @@ __Skim__
 
 ### jQuery
 **javascript file**
+[jQuery Cheat Sheet](https://oscarotero.com/jquery/)
 1. include the jQuery script in your page. it is included before the closing </body> tag.
 1. $ () shortcut for the jQuery () function.
 1. it makes coding simpler

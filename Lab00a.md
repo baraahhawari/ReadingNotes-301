@@ -90,7 +90,8 @@ function letTest() {
 var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
-console.log(this.y); // undefined```
+console.log(this.y); // undefined
+```
 
 ## The const statement 
 __The value of a constant can't be changed through reassignment, and it can't be redeclared.__

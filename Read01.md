@@ -3,7 +3,7 @@
 ### Responsive Web Design
 __Responsive web design is the practice of building a website suitable to work on every device and every screen size, no matter how large or small, mobile or desktop.__
 
-(Ethan Marcotte book)[https://abookapart.com/products/responsive-web-design]
+[Ethan Marcotte book](https://abookapart.com/products/responsive-web-design)
 
 **Responsive** vs. **Adaptive** vs. **Mobile**
 - _Responsive_ generally means to react quickly and positively to any change.
@@ -37,7 +37,7 @@ Currently the most popular **technique** lies within **responsive web design**, 
     - The **parent** element needs to have a **width of 100%** so that it may scale based on the width of the viewport.
     - the parent element also needs to have a **height of 0** to trigger the hasLayout mechanism within Internet Explorer.
 
-(Responsive Web Design)[https://alistapart.com/article/responsive-web-design/]
+[Responsive Web Design](https://alistapart.com/article/responsive-web-design/)
 
 # Intro to SMACSS
 ### Scalable and Modular Architecture for CSS A flexible guide to developing sites small and large.
