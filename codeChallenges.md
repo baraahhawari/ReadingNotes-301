@@ -81,38 +81,73 @@ console.log(camelCase);
 `
 
 # Code Challenge: 05 - Split, join, slice, splice
+
 ## Array and String Methods
 
-- [ Split, join, slice, splice](https://codefellows.github.io/code-301-guide/curriculum/class-05/challenges/).
+- [Array and String Methods](https://codefellows.github.io/code-301-guide/curriculum/class-05/challenges/).
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
 - [try](https://codefellows.github.io/code-301-guide/curriculum/class-05/challenges/DEMO.html)
 
 `
 let str="bebo is awsom";
 word=str.split('');
+
 <!-- will split by letter -->
+
 console.log(word);
 
 let str="bebo is awsom";
 word=str.split(' ');
+
 <!-- will split by word -->
+
 console.log(word);
 
 let letter='B';
+
 <!-- the code (numeric value) for the letter -->
+
 console.log(letter.charCodeAt(0));
 
-
 let str="bebo is awsom";
+
 <!-- the 3rd letter -->
+
 console.log(str.charAt(3));
 
 let str="bebo is awsom";
+
 <!-- incleds true not includes false -->
+
 console.log(str.includes('be'));
+
 <!-- true false -->
+
 console.log(str.startsWith('b'));
 console.log(str.endsWith('b'));
+
 <!-- start and end of letter in the string (space is counted as index) -->
+
 console.log(str.substring(2,3));
 `
+
+# Code Challenge: 06 - Object.keys, Object.values, Object.entries
+
+- [Object Iteration](https://codefellows.github.io/code-301-guide/curriculum/class-06/challenges/).
+- [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+- [try](https://codefellows.github.io/code-301-guide/curriculum/class-06/challenges/DEMO.html)
+
+_**for … in** … a looping method for objects that acts much like an old fashioned “for” loop._
+`for( let property in person ) { console.log(property, person[property]); }`
+_**Object.keys** … this is an Object constructor prototype method, which takes in an object as an argument and returns an array of keys (properties)_
+`let properties = Object.keys(person); properties.forEach( property => { console.log(property, person[property]); })`
+_**Object.values** - Returns an iterable array of just the values from the object._
+_**Object.entries** - Returns an array of each “Entry” as an an array with a key and value_
+
+**Caveats(warnings) and Notes**
+
+1. Applies the **callback** to each element
+1. You **cannot “Return”** a value
+1. You **cannot “break”** or **“continue”** as you can with a for loop
+1. By default, forEach does not mutate the array
+1. If you mutate it in process, you will have interesting issues
