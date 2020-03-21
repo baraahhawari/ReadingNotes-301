@@ -151,3 +151,76 @@ _**Object.entries** - Returns an array of each “Entry” as an an array with a
 1. You **cannot “break”** or **“continue”** as you can with a for loop
 1. By default, forEach does not mutate the array
 1. If you mutate it in process, you will have interesting issues
+
+## Object Iteration
+
+- object is a data type
+- use methode to get its value
+
+```const person={
+firstName:'bebo',
+lastName:'3asal',
+age:22,
+what:['aha', 'aywa']
+};
+<!-- the output will be the object as it is -->
+// console.log(person);
+// **Object.values** is a constructor function to iterate the value of an object as an array
+<!-- the output will be ['bebo', '3asal', 22, ['aha', 'aywa']] -->
+console.log(Object.values(person));
+```
+
+```// the keys of the object
+<!-- the output will be ['firstName', 'lastName', 'age', 'what'] -->
+console.log(Object.keys(person));
+
+// this will print the values of the object keys
+Object.keys(person).forEach((value)=>{
+<!-- this will print firstName    lastName   age   what -->
+  console.log(value);
+<!-- the output will be the values of the keys -->
+<!-- bebo   3asal   22  ['aha', 'aywa']-->
+console.log(person[value]);
+});
+```
+
+<// the output will be array of array
+console.log(Object.entries(person));>
+
+### map for array
+
+- forEach will return array
+  **so if I did that**_the output will be undefiend_
+  <b/c forEach runs for every element in the array and dose not return >
+
+```let names=['bebo', 'nma2', '2ns'];
+let allNames=names.forEach((name)=>{
+<b/c forEach runs for every element in the array and doesnt return>
+<!-- undefiened -->
+  return name;
+})
+<!-- the output will be Undefiend -->
+console.log(allNames);
+
+```
+
+_so_ **map** it runs through each element in the array and does return a new array that the exact same size of the origion one and filled with value that it return.
+
+**map used to change the shape of data from strings to opject ot to bollean ..etc**
+
+1. map dosent change the origion array
+1. its called functional programming
+  - immutable (cant be change)
+  - no side effects (the function only works inside the braces)
+
+<!-- the difference btw map and for each that
+map whatever U return it will became an element of the array
+ -->
+
+```let allNames=names.map((name)=>{
+return name;
+})
+<!-- the map output is always an array -->
+console.log( allNames);
+<!-- the output will be ['bebo', 'nma2', '2ns'] -->
+```

@@ -20,3 +20,16 @@ Request a personal API key from the following APIs. You should receive these in 
 [Dark Sky API Docs](https://darksky.net/dev/docs)
 [Yelp API Docs](https://www.yelp.com/developers/documentation/v3/business_search)
 [The Movie DB API Docs](https://developers.themoviedb.org/3/getting-started/introduction)
+
+#### live API's
+
+[Developer accounts](https://console.developers.google.com/projectselector2/apis/dashboard?pli=1&supportedpurview=project)
+
+- go to this wesite and create project (_this will make me google developer_ **it will allow me to do work for google with thier data**)
+- activate enable apis and services
+  - search for the api that U need (mab and geo)
+    - Maps Static API (that will draw the maps for us)
+    - Maps JavaScript API
+    - Geocoding API
+- create credentials to allow U to use the api
+  - api key (it will creat an api key for U) _api key_**AIzaSyAjgY6orhQxdVuxkJ-cWF81hdwassjAbkg**
