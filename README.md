@@ -16,21 +16,21 @@
 
 :smiley:
 
-| 301 Reads                                                                         |
-| --------------------------------------------------------------------------------- |
-| [code-Challenges](https://baraahhawari.github.io/ReadingNotes-301/codeChallenges) |
-| [Lab00a](https://baraahhawari.github.io/ReadingNotes-301/Lab00a)                  |
-| [Lab00b](https://baraahhawari.github.io/ReadingNotes-301/Lab00b)                  |
-| [Class-01](https://baraahhawari.github.io/ReadingNotes-301/Read01)                |
-| [Class-02](https://baraahhawari.github.io/ReadingNotes-301/Read02)                |
-| [Class-03](https://baraahhawari.github.io/ReadingNotes-301/Read03)                |
-| [Class-04](https://baraahhawari.github.io/ReadingNotes-301/Read04)                |
-| [Class-05](https://baraahhawari.github.io/ReadingNotes-301/Read05)                |
-| [Class-06](https://baraahhawari.github.io/ReadingNotes-301/Read06)                |
-| [Class-07](https://baraahhawari.github.io/ReadingNotes-301/Read07)                |
-| [Class-08](https://baraahhawari.github.io/ReadingNotes-301/Read08)                |
-| [Class-09](https://baraahhawari.github.io/ReadingNotes-301/Read09)                |
-| [Class-10](https://baraahhawari.github.io/ReadingNotes-301/Read10)                |
+| 301 Reads                                                                         | Title                            |
+| --------------------------------------------------------------------------------- | -------------------------------- |
+| [code-Challenges](https://baraahhawari.github.io/ReadingNotes-301/codeChallenges) | Data Structures Algorithms repo  |
+| [Lab00a](https://baraahhawari.github.io/ReadingNotes-301/Lab00a)                  | ES6 let and const                |
+| [Lab00b](https://baraahhawari.github.io/ReadingNotes-301/Lab00b)                  | ES6 Arrow Functions              |
+| [Class-01](https://baraahhawari.github.io/ReadingNotes-301/Read01)                | SMACSS and Responsive Web Design |
+| [Class-02](https://baraahhawari.github.io/ReadingNotes-301/Read02)                | jQuery, Events, and The DOM      |
+| [Class-03](https://baraahhawari.github.io/ReadingNotes-301/Read03)                | Flexbox and Templating           |
+| [Class-04](https://baraahhawari.github.io/ReadingNotes-301/Read04)                | Responsive Web Design            |
+| [Class-05](https://baraahhawari.github.io/ReadingNotes-301/Read05)                | Heroku Deployment                |
+| [Class-06](https://baraahhawari.github.io/ReadingNotes-301/Read06)                | Node, Express, and APIs          |
+| [Class-07](https://baraahhawari.github.io/ReadingNotes-301/Read07)                | APIs                             |
+| [Class-08](https://baraahhawari.github.io/ReadingNotes-301/Read08)                | SQL                              |
+| [Class-09](https://baraahhawari.github.io/ReadingNotes-301/Read09)                | Refactoring and Modules          |
+| [Class-10](https://baraahhawari.github.io/ReadingNotes-301/Read10)                | The Call Stack and Debugging     |
 
 I Can ~~not~~ Do It.
 
