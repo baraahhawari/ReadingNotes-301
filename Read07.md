@@ -33,3 +33,69 @@ Request a personal API key from the following APIs. You should receive these in 
     - Geocoding API
 - create credentials to allow U to use the api
   - api key (it will creat an api key for U) _api key_**AIzaSyAjgY6orhQxdVuxkJ-cWF81hdwassjAbkg**
+
+<!-- if some one is using chrome -->
+
+- _the chrome will be a client b/c its asking for information_
+- _the server will send back jason data_
+- _behind the server to get info_
+  - if I search for weather the **server** will get the API from darksky api **(cloud)**
+  - writting the code (to make the api getting the data) **superagent**(will take the **api url** to the **cloud** and **.then** will get back with the data (**promise**))
+    - **data.body** data object
+    - process it using **forEach day** and made **instance** and from that a constructor function
+    - **mapped** it or **push** to get an array of info (weather)
+
+### **make express server to deal with the above work**
+
+1. get Repo
+1. clone it down with (**.gitignore(node)** and README)
+1. touch the server.js
+1. npm init
+
+   - package.json
+
+1. ACP to Master
+1. woking branch
+
+- start the work :
+  - npm install (**cors express dotenv superagent**)
+
+1. touch .env file
+
+- PORT=8000
+
+1. edit the server.js file
+
+- proof of life
+    <!-- 
+    'use strict';
+    requier('dotenv').config();
+    const express=require('express');
+    const PORT= process.env.PORT;
+    const server=express;
+    server.get('/hi',(req,res)=>{
+      res.status(200).send('hi');
+    });
+    **started up**
+    server.listen(PORT, ()=>{
+      console.log('hello');
+      })
+      -->
+  _npm start or nodemon_
+  _then go to the local host and test it_
+  _ACP and merge_
+
+### DEPLOY
+
+1. **Heroku**
+
+- create an app
+- connect to get
+- pick the repo
+- auto deploy
+
+_the diffecult things are_:
+**API DOCS**
+**BIG OBJECTS**
+event.event.day....[]
+
