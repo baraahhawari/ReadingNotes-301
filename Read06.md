@@ -1,5 +1,7 @@
 # Node, Express, and APIs
 
+[fron end link to check the apps](https://codefellows.github.io/code-301-guide/curriculum/city-explorer-app/front-end/)
+
 **Reading**
 [An Introduction to Node.js on sitepoint.com](https://www.sitepoint.com/an-introduction-to-node-js/)
 
@@ -103,15 +105,7 @@ Node is particularly suited to building applications that require some form of *
 **Other Uses of Node**
 **And it doesn’t stop at the server. There are many other exciting and varied uses of Node.js! For example it can be used as a scripting language to automate repetitive or error prone tasks on your PC. It can also be used to write your own command line tool, such as this Yeoman-Style generator to scaffold out new projects. Node.js can also can be used to build cross-platform desktop apps and even to create your own robots**
 
-
-
-
-
-
-
-## Trello :: way of working as professional 
-
-
+## Trello :: way of working as professional
 
 <!-- Express:
 
