@@ -15,6 +15,17 @@
 - [try](https://codefellows.github.io/code-301-guide/curriculum/class-03/challenges/DEMO.html)
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
 
+**sort function** through an array
+
+1. sort function will take a call back function(compare function)
+
+- will compare the 2 values (a, b)
+  - a, b the values from the array
+    `[1,2,6,7,3,44,6]` the normal will be a=1, b=2 \ a=2, b=6 etc..
+    - if the function returns **true** will reverse the array
+    - if it returns **false** a=1 b=2\ a=1 b=6 (the first number stay where it is) will return the array with no changes
+    - if it return a **zero** will return the array with no changes
+
 # Code Challenge: 04 - Regular expressions, part 1
 
 - [Regular expressions](https://codefellows.github.io/code-301-guide/curriculum/class-04/challenges/)
@@ -210,8 +221,9 @@ _so_ **map** it runs through each element in the array and does return a new arr
 
 1. map dosent change the origion array
 1. its called functional programming
-  - immutable (cant be change)
-  - no side effects (the function only works inside the braces)
+
+- immutable (cant be change)
+- no side effects (the function only works inside the braces)
 
 <!-- the difference btw map and for each that
 map whatever U return it will became an element of the array
