@@ -132,6 +132,12 @@ _const_ declaration:
 
 #### Summary
 
+You are familiar with the process of declaring a variable using **var**, and how that **variable receives global or local scope depending on the context in which it was declared**. If the variable is declared outside of any functions, it has global scope, but if it is declared inside a function, the variable is scoped to that function and not accessible globally.
+
+**let**
+
+1. a variable declaration can be scoped to a code block { code }, such as we commonly see with **for, if, or while** constructions. As with variables declared with var, the **values assigned to them can be reassigned** to any type of value at any time, so long as the reassignment occurs within the same scope in which the variable was declared.
+
 **const** is a little more complicated:
 
 - Like let, **const** is also **block-scoped**.
