@@ -110,7 +110,3 @@ _Intro to EJS - Partials_
 <%- body %>
 <%- include('partials/onepartial') %>
 ```
-
-# Read: 14b - Project Ideas & APIs
-
-[public-apis](https://github.com/public-apis/public-apis)
