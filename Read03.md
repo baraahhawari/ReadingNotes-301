@@ -1,5 +1,79 @@
 # Flexbox and Templating
 
+[Templating with Mustache](https://medium.com/@1sherlynn/javascript-templating-language-and-engine-mustache-js-with-node-and-express-f4c2530e73b2)
+
+[Reference: Mustache.js Official Documentation](https://github.com/janl/mustache.js)
+
+[Getting started with Mustache.js](https://www.youtube.com/watch?v=mguNnJP5drw)
+
+## Mustache.js
+
+1. js templetting library
+1. ease to seperate data from presentation
+1. allow to write code easier to **understand**, **maintain** and **extend**
+
+**Code Examples**
+
+1. snippits.js => small pieces of javaScript code
+1. index.html => an example of a webpage
+1. style.css => for presentatoin only
+1. mustache-logo.png => for presentatoin only
+
+`to use it, it should be included to the webpage`
+
+**Install**
+`$ npm install mustache --save`
+
+**Usage**
+
+```var view = {
+  title: "Joe",
+  calc: function () {
+    return 2 + 4;
+  }
+};
+
+var output = Mustache.render("{{title}} spends {{calc}}", view);
+```
+
+**Templates**
+`There are several techniques that can be used to load templates and hand them to mustache.js:`
+
+```<html>
+  <body onload="renderHello()">
+    <div id="target">Loading...</div>
+    <script id="template" type="x-tmpl-mustache">
+      Hello {{ name }}!
+    </script>
+
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="render.js"></script>
+  </body>
+</html>
+```
+
+1. _Include Templates_
+
+```function renderHello() {
+  var template = document.getElementById('template').innerHTML;
+  var rendered = Mustache.render(template, { name: 'Luke' });
+  document.getElementById('target').innerHTML = rendered;
+}
+```
+
+1. _Load External Templates_
+   using [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) :
+
+   ```function renderHello() {
+   fetch('template.mustache')
+    .then((response) => response.text())
+    .then((template) => {
+      var rendered = Mustache.render(template, { name: 'Luke' });
+      document.getElementById('target').innerHTML = rendered;
+    });
+   }
+   ```
+
 ### Learn Handlebars in 10 Minutes or Less
 
 ### What is Handlebars?
