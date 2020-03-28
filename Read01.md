@@ -1,5 +1,15 @@
 # SMACSS and Responsive Web Design
 
+**Reading**
+[Shay Howe’s intro to RWD](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+[All About Floats](https://css-tricks.com/all-about-floats/)
+
+**Bookmark/Skim**
+[Don’t Overthink It Grids](https://css-tricks.com/dont-overthink-it-grids/)
+[CSS Floats Explained By Riding An Escalator](https://www.freecodecamp.org/news/css-floats-explained-by-riding-an-escalator-57fa55232333/) - If you took Code 201, review this article. If you did not take Code 201, this is Essential reading.
+
+[SMACSS Official Documentation](http://smacss.com/)
+
 ### Responsive Web Design
 
 **Responsive web design is the practice of building a website suitable to work on every device and every screen size, no matter how large or small, mobile or desktop.**
@@ -21,9 +31,11 @@ Currently the most popular **technique** lies within **responsive web design**, 
 ### Responsive web design is broken down into three main components:
 
 1. Flexible Layouts
+
    - the practice of building the layout of a website with a **flexible grid**
    - capable of dynamically resizing to any width.
      - **Flexible grids** are built using relative length units(percentages **%** or **em**). These relative lengths are then used to declare common grid property values such as **width**, **margin**, or **padding**.
+
 1. media queries
 
    - an **extension** to media types commonly found when targeting and including styles.
@@ -34,12 +46,15 @@ Currently the most popular **technique** lies within **responsive web design**, 
      - Viewport Scale `<meta name="viewport" content="initial-scale=2">`
 
 1. flexible media
+
    - Images, videos, and other media types need to be scalable, changing their size as the size of the viewport changes.
    - using the **max-width** property.
-     **Flexible Embedded Media**
-   - the embedded element needs to be **absolutely** positioned within **a parent element**.
-   - The **parent** element needs to have a **width of 100%** so that it may scale based on the width of the viewport.
-   - the parent element also needs to have a **height of 0** to trigger the hasLayout mechanism within Internet Explorer.
+
+**Flexible Embedded Media**
+
+- the embedded element needs to be **absolutely** positioned within **a parent element**.
+- The **parent** element needs to have a **width of 100%** so that it may scale based on the width of the viewport.
+- the parent element also needs to have a **height of 0** to trigger the hasLayout mechanism within Internet Explorer.
 
 [Responsive Web Design](https://alistapart.com/article/responsive-web-design/)
 
@@ -127,8 +142,8 @@ Currently the most popular **technique** lies within **responsive web design**, 
 **Float is a CSS positioning property**
 
 - What are floats used for!
-  - used to create entire web layouts.
-- Clearing the Float
+  - **used to create entire web layouts.**
+  - Clearing the Float
 
 **Techniques for Clearing Floats**
 
@@ -162,8 +177,9 @@ Currently the most popular **technique** lies within **responsive web design**, 
 - **theme.css** should contain small changes on top of all other normal styling
   - Applying temporary changes, such as a holiday theme.
 
-<!-- Reham Told me :
+```Reham Told me :
 1. base (reset tags like  margin badding ..)
 2. layout(grid float position display width ..)
 3. theme (color background ..  )
-4. modules(navbar list collabsing .. ) -->
+4. modules(navbar list collabsing .. )
+```
