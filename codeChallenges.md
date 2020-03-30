@@ -4,6 +4,41 @@
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
 - [try](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/DEMO.html)
 
+**code challenge** ::
+**Array.forEach**
+
+1. Applies the callback to each element
+1. You cannot “Return” a value
+1. You cannot “break” or “continue” as you can with a for loop
+1. By default, forEach does not mutate the array
+1. If you mutate it in process, you will have interesting issues
+
+[forEach](https://codeburst.io/javascript-the-difference-between-foreach-and-for-in-992db038e4c2)
+
+**Array.forEach** allows you to iterate through an array. Where a normal for loop is “iterative”, forEach is more declarative or functional in nature.
+
+It is implemented as a method on your array instance.
+
+```let myArray = ['a', 'b', 'c'];
+myArray.forEach( ... )
+It takes a callback as a parameter, which in turn receives the value and the iterator, and runs it on every element.
+
+let myArray = ['a','b','c'];
+
+myArray.forEach( function(value, i) {
+  console.log(i);       // 0, 1, 2
+  console.log(value);   // a, b, c
+})
+```
+
+`// For loops let us "break" away given a condition`
+`// For loops let us "continue" (skip over an iteration) given a condition`
+`// In a function, you can return from a for loop...`
+`// In a function, you can return from a for loop...`
+`// Array.forEach is a method on an array that processes every element in the array with a callback`
+`// The callback is always given the current element's value and index in the array as args`
+`// It cannot "break", "continue" or "return"`
+
 # Code Challenge: 02 - Pass by value, pass by reference
 
 - [Pass by value, pass by reference](https://codefellows.github.io/code-301-guide/curriculum/class-02/challenges/)
