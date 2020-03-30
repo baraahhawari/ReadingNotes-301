@@ -164,38 +164,40 @@ Handlebars.js and Mustache are **both** **open source tools**. **Handlebars.js**
 1. **space-between**: Items display with equal spacing between them.
 1. **space-around**: Items display with equal spacing around them.
 
-````#pond {
+```#pond {
   display: flex;
 justify-content:center;
-}```
+}
+```
 
-- __align-items__ CSS property aligns items **vertically** and accepts the following values:
+- **align-items** CSS property aligns items **vertically** and accepts the following values:
+
 1. **flex-start**: Items align to the top of the container.
 1. **flex-end**: Items align to the bottom of the container.
 1. **center**: Items align at the vertical center of the container.
 1. **baseline**: Items display at the baseline of the container.
 1. **stretch**: Items are stretched to fit the container.
 
+- **flex-direction** This CSS property defines the direction items are placed in the container, and accepts the following values:
 
-- __flex-direction__ This CSS property defines the direction items are placed in the container, and accepts the following values:
 1. **row**: Items are placed the same as the text direction.
 1. **row-reverse**: Items are placed opposite to the text direction.
 1. **column**: Items are placed top to bottom.
 1. **column-reverse**: Items are placed bottom to top.
 
-
 **Notice that when the flex direction is a column, justify-content changes to the vertical and align-items to the horizontal.**
 
-- __order__  Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the __order__ property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
--  __align-self__ Another property you can apply to **individual** items is **align-self**. This property accepts the same values as align-items and its value for the specific item.
+- **order** Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the **order** property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
+- **align-self** Another property you can apply to **individual** items is **align-self**. This property accepts the same values as align-items and its value for the specific item.
 
-- __flex-wrap__ property, which accepts the following values:
+- **flex-wrap** property, which accepts the following values:
+
 1. **nowrap**: Every item is fit to a single line.
 1. **wrap**: Items wrap around to additional lines.
 1. **wrap-reverse**: Items wrap around to additional lines in reverse.
 
-- __flex-flow__ The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow.
-- __align-content__ to set how multiple lines are spaced apart from each other. This property takes the following values:
+- **flex-flow** The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow.
+- **align-content** to set how multiple lines are spaced apart from each other. This property takes the following values:
 
 1. **flex-start** : Lines are packed at the top of the container.
 1. **flex-end** : Lines are packed at the bottom of the container.
@@ -203,56 +205,10 @@ justify-content:center;
 1. **space-between** : Lines display with equal spacing between them.
 1. **space-around** : Lines display with equal spacing around them.
 1. **stretch** : Lines are stretched to fit the container.
-This can be **confusing**, but **align-content** determines the **spacing between lines**, while **align-items** determines how the **items as a whole are aligned within the container**. When there is only one line, align-content has no effect.
+   This can be **confusing**, but **align-content** determines the **spacing between lines**, while **align-items** determines how the **items as a whole are aligned within the container**. When there is only one line, align-content has no effect.
 
-`#pond {
-display: flex;
-flex-wrap: wrap;
-align-content:flex-start;
-}`
+`#pond { display: flex; flex-wrap: wrap; align-content:flex-start; }`
 
+`#pond { display: flex; flex-direction:column-reverse; flex-wrap:wrap-reverse; justify-content:center; align-content:space-between; }`
 
-`#pond {
-display: flex;
-flex-direction:column-reverse;
-flex-wrap:wrap-reverse;
-justify-content:center;
-align-content:space-between;
-}`
-
-[trythis](https://codepip.com/games/)
-=============================================================================
-**code challenge** ::
-**Array.forEach**
-
-1. Applies the callback to each element
-1. You cannot “Return” a value
-1. You cannot “break” or “continue” as you can with a for loop
-1. By default, forEach does not mutate the array
-1. If you mutate it in process, you will have interesting issues
-
-[forEach](https://codeburst.io/javascript-the-difference-between-foreach-and-for-in-992db038e4c2)
-
-__Array.forEach__ allows you to iterate through an array. Where a normal for loop is “iterative”, forEach is more declarative or functional in nature.
-
-It is implemented as a method on your array instance.
-
-```let myArray = ['a', 'b', 'c'];
-myArray.forEach( ... )
-It takes a callback as a parameter, which in turn receives the value and the iterator, and runs it on every element.
-
-let myArray = ['a','b','c'];
-
-myArray.forEach( function(value, i) {
-  console.log(i);       // 0, 1, 2
-  console.log(value);   // a, b, c
-})
-````
-
-`// For loops let us "break" away given a condition`
-`// For loops let us "continue" (skip over an iteration) given a condition`
-`// In a function, you can return from a for loop...`
-`// In a function, you can return from a for loop...`
-`// Array.forEach is a method on an array that processes every element in the array with a callback`
-`// The callback is always given the current element's value and index in the array as args`
-`// It cannot "break", "continue" or "return"`
+# [GAMES](https://codepip.com/games/)
