@@ -119,6 +119,36 @@ _Handlebars is a simple templating language_
 
 - have an opening and a closing tag (like the **#if** and **#each** built-ins)
 
+## Handlebars.js vs Mustache
+
+[Handlebars.js vs Mustache](https://stackshare.io/stackups/handlebars-vs-mustache)
+
+**Handlebars.js vs Mustache: What are the differences?**
+
+**Handlebars.js**:
+
+1. Minimal Templating on Steroids.
+1. Handlebars.js is an **extension** to the **Mustache** templating language created by Chris Wanstrath.
+1. Handlebars.js and Mustache are **both** **logicless** **templating** **languages** that keep the view and the code separated like we all know they should be;
+
+**Mustache: Logic-less templates.**
+
+1. Mustache is a logic-less template **syntax**.
+1. It can be used for **HTML**, **config files**, **source code - anything**.
+1. It works by **expanding tags** in a template using **values provided in a hash or object**.
+1. We call it "**logic-less**" because there are **no if statements**, **else clauses**, or** for loops**.
+1. Instead there are only **tags**. Some tags are replaced with a **value**, some **nothing**, and others a **series of values**.
+
+`Handlebars.js and Mustache belong to "Templating Languages & Extensions" category of the tech stack.`
+
+"Simple" is the top reason why over 102 developers like _Handlebars.js_, while over 29 developers mention "Dead simple templating" as the leading cause for choosing Mustache.
+
+Handlebars.js and Mustache are **both** **open source tools**. **Handlebars.js** with 14.5K GitHub stars and 1.86K forks on GitHub appears to be **more popular** than Mustache with 13.1K GitHub stars and 2.3K GitHub forks.
+
+![Handlebars.js vs Mustache](img/handel-vs-mustach.png)
+
+![Handlebars.js vs Mustache](img/handlebarsvsmustache.png)
+
 ## A Complete Guide to Flexbox
 
 [A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
