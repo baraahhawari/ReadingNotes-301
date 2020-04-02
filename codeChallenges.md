@@ -61,6 +61,10 @@ myArray.forEach( function(value, i) {
     - if it returns **false** a=1 b=2\ a=1 b=6 (the first number stay where it is) will return the array with no changes
     - if it return a **zero** will return the array with no changes
 
+[sorting algorithms](https://www.toptal.com/developers/sorting-algorithms)
+
+[Sorting complex](https://www.hhllcks.de/blog/javascript-sort)
+
 # Code Challenge: 04 - Regular expressions, part 1
 
 - [Regular expressions](https://codefellows.github.io/code-301-guide/curriculum/class-04/challenges/)
