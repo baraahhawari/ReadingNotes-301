@@ -170,7 +170,7 @@ Currently the most popular **technique** lies within **responsive web design**, 
   - Classes and IDs can be included here
 - **modules.css** should contain smaller components on the page
   - Apply to elements such as list items, individual images, specific paragraphs
-  - Classes and descendant selectors should primarily be included here
+  - Classes and descendant selectors should primarily be included here **colors**
 - **state.css** should contain any styling that changes upon user interaction or state change
   - Apply to hover state, before or after clicking on a link, focus and blur effects
   - Pseudo-classes and pseudo-elements should be included here
