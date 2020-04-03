@@ -15,26 +15,29 @@
 
 **One requirement** is **informing the platform** as to <which parts of your application are runnable>.
 
-- Heroku is a **polyglot[speaking, many languages.]** platform.
-  - it lets you build
-  - run and
-  - scale applications in a similar manner across all the languages
-  - utilizing the dependencies and Procfile.
+- Heroku is a **polyglot[speaking, many languages.]** platform it lets you:
+  - **build**
+  - **run**
+  - **scale** applications in a similar manner across all the languages
+  - utilizing the **dependencies** and Procfile.
     - The Procfile exposes an architectural aspect of your application
 
 ### Deploying applications
 
-1. The Heroku platform uses **Git** as the primary means for deploying applications (there are other ways to transport your source code to Heroku, including via an API).
+1. The Heroku platform uses **Git** as the primary means for deploying applications (there are other ways to transport your source code to Heroku, including via an **API**).
 1. When you create an application on Heroku, it associates a **new Git remote**, typically named heroku, with the local Git repository for your application. `$ git push heroku master`
 
 ### Build
 
 ### Running applications on dynos
 
-Heroku executes applications by running a command you specified in the Procfile, on a dyno that’s been preloaded with your prepared slug (in fact, with your release, which extends your slug and a few items not yet defined: config vars and add-ons).
+Heroku executes applications by running a command you specified in the Procfile, on a dyno that’s been preloaded with your prepared slug (in fact, with your release, which extends your **slug** and a few items not yet defined: **config vars** and **add-ons**).
+
 `$ heroku ps:scale web=3 queue=2`
 
-# Node.js For Beginners. Deploy Your Blog to Heroku
+# Node.js For Beginners.
+
+## Deploy Your Blog to Heroku
 
 ### How can I?
 
@@ -46,16 +49,21 @@ Heroku executes applications by running a command you specified in the Procfile,
 
 ### Pretty simple, but it's a server!
 
-First of all, we need to create a JavaScript file. Let's name it **server.js**:
+First of all, we need to **create a JavaScript file**. Let's name it **server.js**:
 
-`var http = require("http");
+```var http = require("http");
 
-http.createServer(function(request, response) {
-response.writeHead(200, {"Content-Type": "text/plain"});
-response.write("It's alive!");
+http.createServer( function( request, response) {
+
+response.writeHead( 200, {"Content-Type": "text/plain"} );
+
+response.write( "It's alive!" );
+
 response.end();
+
 }).listen(3000);
-`
+
+```
 
 - **make sure it's working**. Run at your terminal: `node server.js`
 
@@ -70,16 +78,20 @@ response.end();
 
 ## Make it worldwide
 
-- use **Heroku** cloud application platform for this
+Use **Heroku** cloud application platform for this
 
-1. First step after Heroku installation is to log in to the system from your computer:
-   `heroku login`.
+- First step after Heroku installation is to log in to the system from your computer:
+
+  `heroku login`.
 
 **Create your project directory**. And then **create the server.js** file **inside of it**.
 
-1. First of all, let's declare some variables:
+- First of all, let's declare some variables:
 
-`var http = require("http"); will give the **key to Node's HTTP functionality** var fs = require("fs"); for possibility to **interact with the file system** var path = require("path"); allows you to **handle file paths** var mime = require("mime"); allows you to **determine a file's MIME-type it's not a part of Node.js**`
+  - `var http = require("http");` will give the **key to Node's HTTP functionality**
+  - `var fs = require("fs");` for possibility to **interact with the file system**
+  - `var path = require("path");` allows you to **handle file paths**
+  - `var mime = require("mime");` allows you to **determine a file's MIME-type it's not a part of Node.js**`
 
 _so_ we need to _install_ **third-party dependencies** before using it. We need to create the package.json file for that purpose.
 It will contain project related **information**:
@@ -88,38 +100,63 @@ It will contain project related **information**:
 1. version
 1. description, and so on.
 
-For our project we will use **MIME-types recognition**, because it's not enough to just send the contents of a file when you use HTTP. You also need to set the Content-Type header with proper MIME-type. That's why we need this plug-in.
+For our project we will use **MIME-types recognition**, because it's not enough to just **send** the contents of a file when you use HTTP. You also need to **set** the Content-Type header with proper MIME-type. That's why we need this plug-in.
 
-Create the package.json file and fill it with proper information. Here's mine:
-`{ "name" : "blog", "version" : "0.0.1", "description" : "My minimalistic blog", "dependencies" : { "mime" : "~1.2.7" } }`
+- Create the **package.json** file and fill it with proper information. Here's mine:
 
-run `npm install` **It will create node_modules folder and place all the files inside of it**
+```{
+   "name" : "blog",
+   "version" : "0.0.1",
+   "description" : "My minimalistic blog",
+    "dependencies" : { "mime" : "~1.2.7" }
+}
+```
 
-We will now create **send404() function**. It will handle the sending of 404 error, which usually appears when requested file doesn't exist:
+- run `npm install` **It will create node_modules folder and place all the files inside of it**
 
-`function send404(response) { response.writeHead(404, {"Content-type" : "text/plain"}); response.write("Error 404: resource not found"); response.end(); }`
+We will now create **send 404() function**. It will handle the sending of 404 error, which usually appears when requested file doesn't exist:
+
+```function send404(response) {
+   response.writeHead(404, {"Content-type" : "text/plain"});
+   response.write("Error 404: resource not found");
+   response.end(); }
+```
 
 Now we will define **sendPage() function.** It first writes the header and then sends the contents of the file:
 
-`function sendPage(response, filePath, fileContents) { response.writeHead(200, {"Content-type" : mime.lookup(path.basename(filePath))}); response.end(fileContents); }`
+```
+function sendPage(response, filePath, fileContents) {
+   response.writeHead(200, {"Content-type" : mime.lookup(path.basename(filePath))});
+   response.end(fileContents); }
+```
 
 Now we'll define how our **server** will **handle responses**. This function will return the **content of the requested** file or the 404 error otherwise:
 
-`function serverWorking(response, absPath) { fs.exists(absPath, function(exists) { if (exists) { fs.readFile(absPath, function(err, data) { if (err) { send404(response) } else { sendPage(response, absPath, data); } }); } else { send404(response); } }); }`
+```
+function serverWorking(response, absPath) {
+   fs.exists(absPath, function(exists) {
+      if (exists) {
+      fs.readFile(absPath, function(err, data) {
+         if (err) { send404(response) }
+         else { sendPage(response, absPath, data); } }); }
+         else { send404(response); } });
+         }
+```
 
 And now it's time to create the **HTTP server**:
-`var server = http.createServer(function(request, response) {
-var filePath = false;
 
+```var server = http.createServer(function(request, response) {
+var filePath = false;
 if (request.url == '/') {
-filePath = "public/index.html";
-} else {
-filePath = "public" + request.url;
-}
+   filePath = "public/index.html";
+   } else {
+   filePath = "public" + request.url;
+   }
 
 var absPath = "./" + filePath;
 serverWorking(response, absPath);
-});`
+});
+```
 
 Now we need to **start our server. And here's the tricky part.**
 `http.createServer(<some code here>).listen(3000)`
@@ -127,8 +164,8 @@ Now we need to **start our server. And here's the tricky part.**
 `var port_number = server.listen(process.env.PORT || 3000);`
 
 We need to create the **index.html** file. It will determine our **blog's exterior**. Here's the code:
-`
 
+```
 <!DOCTYPE html>
 <html>
     <head>
@@ -152,7 +189,8 @@ We need to create the **index.html** file. It will determine our **blog's exteri
             <p>We will use Node.js for our project. Node.js is an open source, cross-platform runtime environment, which allows you to build server-side and networking applications. It's written in JavaScript and can be run within the Node.js runtime on any platform. First of all, of course, you need to install it... <a class="article" href="hode.html">Read more</a></p>
         </div>
     </body>
-</html>`
+</html>
+```
 
 **To start your server locally run:** `node server.js`
 We tested our simple server locally and now is time to deploy it.
@@ -160,7 +198,7 @@ We tested our simple server locally and now is time to deploy it.
 ## It's Heroku time!
 
 1. Open your terminal within your project folder. For my Linux it's:
-   <cd/path/to/my/project>
+   `cd/path/to/my/project`
 1. Then run: `git init` Empty Git repository will be initialized in .git/ folder.
 1. Then run: `git add .` This command allows Git to track your files changes.
 1. Now commit your files to the initialized Git repo: `git commit -m "Simple server functionality added"`
@@ -177,58 +215,73 @@ We tested our simple server locally and now is time to deploy it.
    `heroku open`
    ##### This command will open your Heroku project in your web browser. In this particular case, server address is https://myfirstserver.herokuapp.com/. Now you can share your first web application with any person you want.
 
-<!-- live server very cool fast and its on the cloud and you can make as many branches as you can -->
-<!-- "use strict";
-// first server
-// 1. create repo on github clone it to the pc
-// 2. deploy and test the server from my machine (data rout send json data/ static files_index.html_ served from public )
-// open repo on pc and create file server.js
-// on the terminal run : 1. npm init -y (it will create a file called package.json)
-//                       2. npm install express (its like jQuery to help server my app depends on express)
-//                       3. cat package.json (your server details)
-//                       4. ls -al (list of files in the folder)
+<!-- ---------------------------------------------------------------------------------------------------------- -->
+<!-- -----------------------------------IMPORTANT-------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------------------------- -->
 
-// to get express in its going to be required
-const express = require("express");
+## live server very cool fast and its on the cloud and you can make as many branches as you can:
 
-// express is actually a function
-// server has alot of methods to help us
-const server = express();
+"use strict";
+first server
 
-// local host (tell express which port to use)
-// PORT writen capitalized b/c whe we will go to herouku it will have many ports (just to know it)
-// process.env.PORT special thing in node(given by heroku for free)
-// the next line means (use what heruku gives U or use 3000)
-const PORT = process.env.PORT || 3000;
+1. create repo on github clone it to the pc
+2. deploy and test the server from my machine (data rout send json data/ static files*index.html* served from public )
+3. open repo on pc and create file server.js
+4. on the terminal run :
+   1. **npm init -y (it will create a file called package.json)**
+   2. **npm install express (its like jQuery to help server my app depends on express)**
+   3. **cat package.json (your server details)**
+   4. **ls -al (list of files in the folder)**
 
-// make rout (which is look like jQuery get(event listener) )
-server.get("/test", (Request, Response) => {
-  Response.send("your test worked");
+to get express in its going to be required
+`const express = require("express");`
+
+express is actually a function
+server has alot of methods to help us
+`const server = express();`
+
+local host (tell express which port to use)
+PORT writen capitalized b/c whe we will go to herouku it will have many ports (just to know it)
+process.env.PORT special thing in node(given by heroku for free)
+the next line means (use what heruku gives U or use 3000)
+`const PORT = process.env.PORT || 3000;`
+
+make rout (which is look like jQuery get(event listener) )
+
+```server.get("/test", (Request, Response) => {
+Response.send("your test worked");
 });
+```
 
-// build another Rout called Data
-server.get("/data", (Request, Response) => {
-  let family = [{ name: "bebo" }, { name: "nma2" }, { name: "mum" }];
-  Response.json(family);
+build another Rout called Data
+
+```server.get("/data", (Request, Response) => {
+let family = [{ name: "bebo" }, { name: "nma2" }, { name: "mum" }];
+Response.json(family);
 });
+```
 
-// static file from public jordan.html
-server.use(express.static("./public"));
+static file from public jordan.html
+`server.use(express.static("./public"));`
 
-// to test it go to terminal and stop the server (clt+c) and start it again npm start
-// go to browser and type http://localhost:3000/test
-// go to browser and type http://localhost:3000/data
-// go to browser and type http://localhost:3000/jordan.html
+to test it go to terminal and stop the server (clt+c) and start it again npm start
+**go to browser and type http://localhost:3000/test**
+**go to browser and type http://localhost:3000/data**
+**go to browser and type http://localhost:3000/jordan.html**
 
-// server has listen
-server.listen(PORT, () =>
-  console.log("listining to the port or on port", PORT)
+server has listen
+
+```server.listen(PORT, () =>
+console.log("listining to the port or on port", PORT)
 );
+```
 
-// on terminal typ npm start (the msg shown will be the msg inside the console)
-// http//localhost:3000/data(its called path or rout)
-//  /data (its called path or rout)
+on terminal typ `npm start` (the msg shown will be the msg inside the console)
 
-// create an account on heroku.com
-// create an app
-// deploy the app from github -->
+```http//localhost:3000/data(its called path or rout)
+ /data (its called path or rout)
+```
+
+create an account on heroku.com
+create an app
+deploy the app from github
