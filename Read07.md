@@ -31,6 +31,7 @@ Which relate to **SQL** with :slot_machine:
 Request a personal API key from the following APIs. You should receive these in your email within a few hours, often within minutes. Please request these keys prior to lecture to allow adequate time because you will need them in order to complete your lab assignment.
 
 - [Geocoding API Docs](https://locationiq.com/) :world_map:
+- [locationiq](https://locationiq.com/) :world_map:
 - [Dark Sky API Docs](https://darksky.net/dev/docs) :cloud_with_rain:
 - [Yelp API Docs](https://www.yelp.com/developers/documentation/v3/business_search) :atom:
 - [The Movie DB API Docs](https://developers.themoviedb.org/3/getting-started/introduction) :performing_arts:
