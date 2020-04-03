@@ -55,14 +55,11 @@ _V8 engine_ enhanced with various features, such as :
 
   - Node.js is an **event-driven**
     _example_:
+    `when a new request comes in (one kind of event) the server will start processing it. If it then encounters a blocking I/O operation, instead of waiting for this to complete, it will register a callback before continuing to process the next event. When the I/O operation has finished (another kind of event), the server will execute the callback and continue working on the original request. Under the hood, Node uses the libuv library to implement this asynchronous (that is, non-blocking) behavior.`
 
-    ```when a new request comes in (one kind of event) the server will start processing it. If it then encounters a blocking I/O operation, instead of waiting for this to complete, it will register a callback before continuing to process the next event. When the I/O operation has finished (another kind of event), the server will execute the callback and continue working on the original request. Under the hood, Node uses the libuv library to implement this asynchronous (that is, non-blocking) behavior.
-
-    ```
-
-  - Node.js capable of handling a large number of **simultaneous connections**
-  - The traditional approach to _scaling a Node app_ is to **clone** it and have the cloned instances share the workload.
-  - Node.js even has a **built-in module** to help you implement a cloning strategy on a single server. :astonished:
+- Node.js capable of handling a large number of **simultaneous connections**
+- The traditional approach to _scaling a Node app_ is to **clone** it and have the cloned instances share the workload.
+- Node.js even has a **built-in module** to help you implement a cloning strategy on a single server. :astonished:
 
 **Are There Any Downsides?** :angel:
 
