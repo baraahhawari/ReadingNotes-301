@@ -1,4 +1,6 @@
-# Code Challenge: 01 - forEach
+# Code Challenges :trophy:
+
+## Code Challenge: 01 - forEach :repeat:
 
 - [forEach](https://codefellows.github.io/code-301-guide/curriculum/class-01/challenges/)
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
@@ -8,14 +10,14 @@
 **Array.forEach**
 
 1. Applies the callback to each element
-1. You cannot “Return” a value
-1. You cannot “break” or “continue” as you can with a for loop
-1. By default, forEach does not mutate the array
-1. If you mutate it in process, you will have interesting issues
+1. You cannot **“Return”** a value
+1. You cannot **“break”** or **“continue”** as you can with a for loop
+1. By default, forEach does not **mutate [convert, change]** the array
+1. If you mutate it in process, you will have interesting **issues**
 
 [forEach](https://codeburst.io/javascript-the-difference-between-foreach-and-for-in-992db038e4c2)
 
-**Array.forEach** allows you to iterate through an array. Where a normal for loop is “iterative”, forEach is more declarative or functional in nature.
+**Array.forEach** allows you to iterate through an array. Where a normal for loop is “iterative”, **forEach** **is more declarative or functional in nature.**
 
 It is implemented as a method on your array instance.
 
@@ -39,12 +41,12 @@ myArray.forEach( function(value, i) {
 `// The callback is always given the current element's value and index in the array as args`
 `// It cannot "break", "continue" or "return"`
 
-# Code Challenge: 02 - Pass by value, pass by reference
+## Code Challenge: 02 - Pass by value, pass by reference
 
 - [Pass by value, pass by reference](https://codefellows.github.io/code-301-guide/curriculum/class-02/challenges/)
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
 
-# Code Challenge: 03 - Sort
+## Code Challenge: 03 - Sort :recycle:
 
 - [sort](https://codefellows.github.io/code-301-guide/curriculum/class-03/challenges/)
 - [try](https://codefellows.github.io/code-301-guide/curriculum/class-03/challenges/DEMO.html)
@@ -65,123 +67,99 @@ myArray.forEach( function(value, i) {
 
 [Sorting complex](https://www.hhllcks.de/blog/javascript-sort)
 
-# Code Challenge: 04 - Regular expressions, part 1
+## Code Challenge: 04 - Regular expressions, part 1 :hash:
 
 - [Regular expressions](https://codefellows.github.io/code-301-guide/curriculum/class-04/challenges/)
 - [try](https://codefellows.github.io/code-301-guide/curriculum/class-04/challenges/DEMO.html)
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
 
-  `'use strict';
+```
+  'use strict';
 
-    <!-- the string that we search in -->
-
+  the string that we search in
   let string = 'The rain is spain falls mainly in june 45 times';
 
-  // validator
-
-    <!-- the variable that hold the value of what we are searching for -->
-
+  validator: the variable that hold the value of what we are searching for
   let validator = /[0-2]/g;
 
-  <!-- test it the output will be true or false depending on the number in the string var-->
+  test it the output will be true or false depending on the number in the string var
+  console.log(validator.test(string));
 
-  // console.log(validator.test(string));
+  let regex= /in\b/g;
 
-let regex= /in\b/g;
+  the output will be an array of ['in', 'in', 'in'] the words that ends of in
+  
+  console.log(string.match(regex));
+  let wordsEnding=/\W/g;
+  output is array of empty spaces ['',''] spaces btween the words
+  console.log(string.match(wordsEnding));
 
-<!-- the output will be an array of ['in', 'in', 'in'] the words that ends of in -->
+  the output will be The_rain_is_spain_falls_mainly_in_june_45_times
+  console.log(string.replace(wordsEnding,'\_'));
 
-// console.log(string.match(regex));
+  let firstLetter= /\b(\w)/g;
 
-let wordsEnding=/\W/g;
+  output is an array of the first letter of each word
+  console.log(string.match(firstLetter));
 
-<!-- output is array of empty spaces ['',''] spaces btween the words -->
+  let firstLetter= /\b(\w)/g;
+  console.log(string.match(firstLetter));
 
-console.log(string.match(wordsEnding));
-
-<!-- the output will be The_rain_is_spain_falls_mainly_in_june_45_times -->
-
-console.log(string.replace(wordsEnding,'\_'));
-
-let firstLetter= /\b(\w)/g;
-
-<!-- output is an array of the first letter of each word -->
-
-console.log(string.match(firstLetter));
-
-let firstLetter= /\b(\w)/g;
-console.log(string.match(firstLetter));
-
-let camelCase=string.replace(firstLetter,(rawMatch, machedThing, idx)=>{
-return idx===0? machedThing.toLowerCase() : machedThing.toUpperCase();
-});
-
-<!-- the output will be the same string each first letter will be capitalized except 't' in The word will be small letter  -->
-
-console.log(camelCase);
+  let camelCase=string.replace(firstLetter,(rawMatch, machedThing, idx)=>{
+  return idx===0? machedThing.toLowerCase() : machedThing.toUpperCase();
+  });
+  the output will be the same string each first letter will be capitalized except 't' in The word will be small letter
+  console.log(camelCase);
 
 let camelCase=string.replace(firstLetter,(rawMatch, machedThing, idx)=>{
 return idx===0? machedThing.toLowerCase() : machedThing.toUpperCase();
 }).replace(/\W/g, '');
 
-<!-- the result above but with no spaces between the words -->
-
+the result above but with no spaces between the words
 console.log(camelCase);
+```
 
-`
+## Code Challenge: 05 - Split, join, slice, splice
 
-# Code Challenge: 05 - Split, join, slice, splice
-
-## Array and String Methods
+### Array and String Methods
 
 - [Array and String Methods](https://codefellows.github.io/code-301-guide/curriculum/class-05/challenges/).
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
 - [try](https://codefellows.github.io/code-301-guide/curriculum/class-05/challenges/DEMO.html)
 
-`
+```
 let str="bebo is awsom";
 word=str.split('');
-
-<!-- will split by letter -->
+will split by letter
 
 console.log(word);
 
 let str="bebo is awsom";
 word=str.split(' ');
-
-<!-- will split by word -->
+will split by word
 
 console.log(word);
 
 let letter='B';
-
-<!-- the code (numeric value) for the letter -->
-
+the code (numeric value) for the letter
 console.log(letter.charCodeAt(0));
 
 let str="bebo is awsom";
-
-<!-- the 3rd letter -->
-
+the 3rd letter
 console.log(str.charAt(3));
 
 let str="bebo is awsom";
-
-<!-- incleds true not includes false -->
-
+includes true not includes false
 console.log(str.includes('be'));
 
-<!-- true false -->
+console.log(str.startsWith('b')); //true
+console.log(str.endsWith('b')); //false
 
-console.log(str.startsWith('b'));
-console.log(str.endsWith('b'));
-
-<!-- start and end of letter in the string (space is counted as index) -->
-
+start and end of letter in the string (space is counted as index)
 console.log(str.substring(2,3));
-`
+```
 
-# Code Challenge: 06 - Object.keys, Object.values, Object.entries
+## Code Challenge: 06 - Object.keys, Object.values, Object.entries
 
 - [Object Iteration](https://codefellows.github.io/code-301-guide/curriculum/class-06/challenges/).
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
