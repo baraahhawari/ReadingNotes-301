@@ -1,4 +1,4 @@
-# Heroku Deployment
+# Heroku Deployment :sunglasses:
 
 **Reading**
 [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs): Getting Started with Node.
@@ -22,7 +22,7 @@
   - utilizing the **dependencies** and Procfile.
     - The Procfile exposes an architectural aspect of your application
 
-### Deploying applications
+### Deploying applications :alien:
 
 1. The Heroku platform uses **Git** as the primary means for deploying applications (there are other ways to transport your source code to Heroku, including via an **API**).
 1. When you create an application on Heroku, it associates a **new Git remote**, typically named heroku, with the local Git repository for your application. `$ git push heroku master`
@@ -76,7 +76,7 @@ response.end();
   - When the response comes back, an **anonymous function is called**. It contains the **argument data**, which is the data received from that request.
   - **Node** allows you to use the **so-called event loop**, which works **faster** because of **non-blocking behavior**.
 
-## Make it worldwide
+## Make it worldwide :earth_asia:
 
 Use **Heroku** cloud application platform for this
 
@@ -158,7 +158,7 @@ serverWorking(response, absPath);
 });
 ```
 
-Now we need to **start our server. And here's the tricky part.**
+Now we need to **start our server. And here's the tricky part.** :nerd_face:
 `http.createServer(<some code here>).listen(3000)`
 **But Heroku sets a dynamically assigned port number to your app. That's why we need to handle all this mess with ports as it’s shown below:**
 `var port_number = server.listen(process.env.PORT || 3000);`
@@ -221,6 +221,7 @@ We tested our simple server locally and now is time to deploy it.
 
 ## live server very cool fast and its on the cloud and you can make as many branches as you can:
 
+:innocent:
 "use strict";
 first server
 
@@ -281,6 +282,8 @@ on terminal typ `npm start` (the msg shown will be the msg inside the console)
 ```http//localhost:3000/data(its called path or rout)
  /data (its called path or rout)
 ```
+
+:fleur_de_lis:
 
 - create an account on heroku.com
 - create an app
