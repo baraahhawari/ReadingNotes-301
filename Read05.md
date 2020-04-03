@@ -233,27 +233,27 @@ first server
    3. **cat package.json (your server details)**
    4. **ls -al (list of files in the folder)**
 
-to get express in its going to be required
+**to get express in its going to be required**
 `const express = require("express");`
 
-express is actually a function
+**express is actually a function**
 server has alot of methods to help us
 `const server = express();`
 
-local host (tell express which port to use)
+**local host (tell express which port to use)**
 PORT writen capitalized b/c whe we will go to herouku it will have many ports (just to know it)
 process.env.PORT special thing in node(given by heroku for free)
 the next line means (use what heruku gives U or use 3000)
 `const PORT = process.env.PORT || 3000;`
 
-make rout (which is look like jQuery get(event listener) )
+**make rout (which is look like jQuery get(event listener) )**
 
 ```server.get("/test", (Request, Response) => {
 Response.send("your test worked");
 });
 ```
 
-build another Rout called Data
+**build another Rout called Data**
 
 ```server.get("/data", (Request, Response) => {
 let family = [{ name: "bebo" }, { name: "nma2" }, { name: "mum" }];
@@ -261,7 +261,7 @@ Response.json(family);
 });
 ```
 
-static file from public jordan.html
+**static file from public jordan.html**
 `server.use(express.static("./public"));`
 
 to test it go to terminal and stop the server (clt+c) and start it again npm start
@@ -269,7 +269,7 @@ to test it go to terminal and stop the server (clt+c) and start it again npm sta
 **go to browser and type http://localhost:3000/data**
 **go to browser and type http://localhost:3000/jordan.html**
 
-server has listen
+**server has listen**
 
 ```server.listen(PORT, () =>
 console.log("listining to the port or on port", PORT)
@@ -282,6 +282,6 @@ on terminal typ `npm start` (the msg shown will be the msg inside the console)
  /data (its called path or rout)
 ```
 
-create an account on heroku.com
-create an app
-deploy the app from github
+- create an account on heroku.com
+- create an app
+- deploy the app from github
