@@ -88,7 +88,7 @@ myArray.forEach( function(value, i) {
   let regex= /in\b/g;
 
   the output will be an array of ['in', 'in', 'in'] the words that ends of in
-  
+
   console.log(string.match(regex));
   let wordsEnding=/\W/g;
   output is array of empty spaces ['',''] spaces btween the words
@@ -119,7 +119,7 @@ the result above but with no spaces between the words
 console.log(camelCase);
 ```
 
-## Code Challenge: 05 - Split, join, slice, splice
+## Code Challenge: 05 - Split, join, slice, splice :diamond_shape_with_a_dot_inside:
 
 ### Array and String Methods
 
@@ -158,6 +158,11 @@ console.log(str.endsWith('b')); //false
 start and end of letter in the string (space is counted as index)
 console.log(str.substring(2,3));
 ```
+
+- **split()** Turning Strings into arrays
+- **join()** Turning arrays into strings
+- **slice()** Find elements within an array
+- **splice()** replace parts of an array with new values
 
 ## Code Challenge: 06 - Object.keys, Object.values, Object.entries
 
