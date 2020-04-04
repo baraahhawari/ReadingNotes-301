@@ -243,6 +243,23 @@ SELECT DISTINCT building_name FROM buildings LEFT JOIN employees ON building_nam
 
 ### SQL Lesson 9: Queries with expressions :cowboy_hat_face:
 
+### SQL Lesson 10: Queries with aggregates (Pt. 1) :nerd_face:
+
+### SQL Lesson 11: Queries with aggregates (Pt. 2) :nerd_face:
+
+### SQL Lesson 12: Order of execution of a Query :fountain_pen:
+
+### SQL Lesson 13: Inserting rows :bar_chart:
+
+### SQL Lesson 14: Updating rows :bookmark_tabs:
+
+### SQL Lesson 15: Deleting rows :no_entry:
+
+### SQL Lesson 16: Creating tables :card_file_box:
+
+### SQL Lesson 17: Altering tables :bar_chart:
+
+### SQL Lesson 18: Dropping tables :bar_chart:
 
 **SQL**
 `terminal commands (psql-f schema.sql -d demo)`
