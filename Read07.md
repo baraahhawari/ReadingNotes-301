@@ -194,3 +194,9 @@ The **.query()** method accepts **objects**, which when used with the **GET** me
 7. The Rise of White-Collar Automation
 8. The Post-Cubicle Office
 9. The New Dream Jobs
+
+The difference between:
+
+1. **npm start** runs whatever the 'start' script config says to run as defined in 'package.json'
+1. **node app.js** executes the 'app.js' file in 'node'
+1. **nodemon** is like a **live-server** for your node application. any **changes** made in your node application will get **reflected** as server will **restart** again.
