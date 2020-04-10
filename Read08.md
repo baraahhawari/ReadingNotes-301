@@ -11,6 +11,13 @@
 1. [SQL Cheat Sheet](http://www.cheat-sheets.org/sites/sql.su/)
 1. SQL Playground
 
+**Importanat Links**
+
+- [SQL Syntax Cheatsheet](https://codefellows.github.io/code-301-guide/curriculum/class-08/cheatsheets/sql)
+- [PostgreSQL Shell Cheatsheet](https://codefellows.github.io/code-301-guide/curriculum/class-08/cheatsheets/postgres-shell)
+- [PostgreSQL Docs](https://www.postgresql.org/docs/)
+- [Heroku Postgres Docs](https://devcenter.heroku.com/articles/heroku-postgresql)
+
 ### What is SQL? :interrobang:
 
 - **Structured Query Language**
