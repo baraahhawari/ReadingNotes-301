@@ -1,19 +1,19 @@
 # Components
 
-**Reading**
+**Reading** :blue_book:
 [EJS Partials](https://medium.com/@henslejoseph/ejs-partials-f6f102cb7433)
 
-**Videos**
+**Videos** :clapper:
 [Watch EJS tutorial from WalkThroughCode on YouTube, Video 7, Partials](https://www.youtube.com/watch?v=3_xEEH4fTEk&t=0s&index=7&list=PL7sCSgsRZ-slYARh3YJIqPGZqtGVqZRGt)
 
 ### EJS Partials
 
 **Partials** come in handy, to **reuse the same HTML across multiple views**.
-<you define that reusable bundle of code in a file andinclude it wherever you need it>
+`you define that reusable bundle of code in a file andinclude it wherever you need it`
 
-_create partials_
+:bookmark: _create partials_
 
-1. inside the **veiws directory** create a **file called **navbar.ejs\*\*
+1. inside the **veiws directory** create a **file called** navbar.ejs :keyboard:
 
 ```<!-- views/partials/navbar.ejs -->
     <div class="header clearfix">
@@ -26,7 +26,7 @@ _create partials_
     </div>
 ```
 
-1. inside the **veiws directory** create a **file called **footer.ejs\*\*
+1. inside the **veiws directory** create a **file called** footer.ejs
 
 ```<!-- views/partials/footer.ejs -->
     <footer class="footer">
@@ -36,7 +36,7 @@ _create partials_
 
 **Now that we have our partials defined, we can use them in our home.ejs and post.ejs templates! In EJS, any JavaScript or non-HTML syntax you include in your templates is always surrounded by <% %> delimiters (you could change these delimiters if you really wanted to).**
 
-_in the home.ejs file_
+_in the home.ejs file_ :computer:
 
 ```<!-- views/home.ejs -->
     <!DOCTYPE html>
@@ -77,7 +77,7 @@ _in the home.ejs file_
 ```
 
 **video**
-_Intro to EJS - Layouts_
+_Intro to EJS - Layouts_ :desktop_computer:
 
 1. **layouts** not native to **ejs** **express**
 1. are useful while switching views between **url**
