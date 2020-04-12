@@ -112,7 +112,8 @@ say=Hi&to=Mom
 - Select "foo.com" in the "Name" tab
 - Select "Headers"
   ![network-monitor](img/network-monitor.png)
-  **The only thing displayed to the user is the URL called. with a GET request the user will see the data in their URL bar, but with a POST request they won't. This can be very important for two reasons:**
+
+**The only thing displayed to the user is the URL called. with a GET request the user will see the data in their URL bar, but with a POST request they won't. This can be very important for two reasons:**
 
 1. If you need to send a **password** (or any other sensitive piece of data), **never use the GET method** or you risk displaying it in the URL bar, which would be very insecure.
 1. If you need to send a **large amount of data**, the **POST** method is **preferred** because some browsers limit the sizes of URLs. In addition, many **servers limit the length of URLs they accept**.
