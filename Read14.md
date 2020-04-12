@@ -27,6 +27,7 @@ _three main reasons_
 1. **simplify queries.** :musical_score:
 
 ![Database Table before being normalized](img/Intro-Table-Not-Normalized.png)
+
 **Note**: The primary key columns are underlined
 The first thing to notice is this table serves many purposes including:
 
@@ -39,14 +40,18 @@ The first thing to notice is this table serves many purposes including:
 #### Data Duplication and Modification Anomalies
 
 1. **Insert Anomaly**
-   ![Database Normalization - Insert Anomaly](img/Intro-Insert-Anomaly.png)
+
+![Database Normalization - Insert Anomaly](img/Intro-Insert-Anomaly.png)
 
 1. **Update Anomaly**
-   ![Table Update Anomaly](img/Intro-Update-Anomaly.png)
-   `If we don’t update all rows, then inconsistencies appear.`
+
+![Table Update Anomaly](img/Intro-Update-Anomaly.png)
+
+`If we don’t update all rows, then inconsistencies appear.`
 
 1. **Deletion Anomaly**
-   ![Table Deletion-Anomaly](img/Intro-Deletion-Anomaly.png)
+
+![Table Deletion-Anomaly](img/Intro-Deletion-Anomaly.png)
 
 ### Definition of Database Normalization :writing_hand:
 
