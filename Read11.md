@@ -12,6 +12,8 @@ a simple **templating language** that lets you **generate HTML markup** with pla
 1. Reference: [Google Books API Docs](https://developers.google.com/books/docs/v1/using#WorkingVolumes)
    Specifically the section about working with Volumes. Review the sample request and response. Practice making requests using Postman and consider the possible properties of the response that you may want to include in your book application.
 1. Reference: [EJS Docs](https://ejs.co/)
+1. [ExpressJS docs - app.set](https://expressjs.com/en/4x/api.html#app.set)
+1. [Superagent](https://visionmedia.github.io/superagent/)
 
 **Bookmark/Skim**
 
