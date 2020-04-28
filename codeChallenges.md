@@ -247,9 +247,7 @@ _so_ **map** it runs through each element in the array and does return a new arr
 - immutable (cant be change)
 - no side effects (the function only works inside the braces)
 
-<!-- the difference btw map and for each that
-map whatever U return it will became an element of the array
- -->
+`the difference btw map and for each that map whatever U return it will became an element of the array`
 
 ```let allNames=names.map((name)=>{
 return name;
@@ -258,3 +256,113 @@ return name;
 console.log( allNames);
 <!-- the output will be ['bebo', 'nma2', '2ns'] -->
 ```
+
+## Code Challenge: 09 - Reduce
+
+- [Reduce](https://codefellows.github.io/code-301-guide/curriculum/class-09/challenges/).
+- [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+- [try](https://codefellows.github.io/code-301-guide/curriculum/class-09/challenges/DEMO.html)
+
+`array.reduce( (accumulator, val, id) => {}, initialValue );` method, functional array method that **JS** provides where the original array never change like the forEach, map and filter. _return something new_
+
+1. runs through the **array**
+1. runs a **callback** on each element in the array
+1. **3 parameters for the callbackk function(accumulator, value, idx)** with the initial value
+1. it is like the map and the filter but with one **difference**
+1. its recieved an extra parameter which is **accumulator**
+1. **accumulator** its a **placeholder** for the returned value from the reduce method.
+1. **accumulator** starts with an **empty** **value** and can be **any type**
+
+- object
+- string
+- number
+- array
+
+**RETURN BACK THE NUMBER OF KIDS**
+the initial value will sent to the accumulator the first time of the loop
+**so the first idx will have 0 as an accumulator**
+
+```
+//key the person and value will be the role
+let people =[
+  {name:'dadi', role:'dad'},
+  {name:'mami', role:'mum'},
+  {name:'2nas', role:'kid'},
+  {name:'hammam', role:'kid'}
+];
+console.log(people);
+
+let numKids=people.reduce(function(accumulator, value, idx){
+console.log('idx', idx, 'accumulator', accumulator);
+}, 0);
+
+the output will be
+idx 0 accumulator 0
+idx 1 accumulator 0
+idx 2 accumulator 0
+idx 3 accumulator 1
+2
+```
+
+**RETURN a new object**
+
+```
+let people =[
+  {name:'dadi', role:'dad'},
+  {name:'mami', role:'mum'},
+  {name:'2nas', role:'kid'},
+  {name:'hammam', role:'kid'}
+];
+let family=people.reduce( (fam, person, idx)=>{
+fam[person.name]=person.role;
+return fam;
+} , {} );
+
+console.log(family);
+
+the output will be
+{ dadi: 'dad', mami: 'mum', '2nas': 'kid', hammam: 'kid' }
+```
+
+#### reduce uses:
+
+- **shaping** data
+- **taking** data from API(where are in the wrong shape)
+- the most important is **declaring** the **shape** of the data with the **accumulator**
+- remember to **return** each time
+
+### another way to use the redue
+
+```
+let str='bebo 3asal';
+let arr=str.split('');
+console.log(arr);
+
+let reversed=arr.reduce((newString, currentLetter)=>{
+return currentLetter+newString;
+}, '');
+console.log('Reversed',reversed);
+the output will be:
+Reversed lasa3 obeb
+```
+
+```
+if I put inside the reduce   console.log('ACC', newString);
+the output will be :
+ACC
+ACC b
+ACC eb
+ACC beb
+ACC obeb
+ACC  obeb
+ACC 3 obeb
+ACC a3 obeb
+ACC sa3 obeb
+ACC asa3 obeb
+Reversed lasa3 obeb
+```
+
+_it will show me the value of the newString on each step_
+and if I put the returned value `newString+currentLetter;`
+the output will be the **original string**
+it will be an **oppisite for the split** _it will regoin the splitted charecters_
