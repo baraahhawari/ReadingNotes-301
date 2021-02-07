@@ -89,7 +89,8 @@ Currently the most popular **technique** lies within **responsive web design**, 
 1. **Clearing Context**
    _The parent element will collapse to zero height since it has only floated children. Let's fix that by clearing it._
 
-```.grid:after {
+```
+.grid:after {
   content: "";
   display: table;
   clear: both;
@@ -102,7 +103,8 @@ Currently the most popular **technique** lies within **responsive web design**, 
 - The first step: **box-sizing:border-box;**
   using it on absolutely everything.
 
-```*, *:after, *:before {
+```
+*, *:after, *:before {
   box-sizing: border-box;
 }
 ```
@@ -111,7 +113,8 @@ Currently the most popular **technique** lies within **responsive web design**, 
 
 - The second step: **applying a fixed padding to the right side of all columns except the last one.**
 
-```[class*='col-'] {
+```
+[class*='col-'] {
   padding-right: 20px;
 }
 [class*='col-']:last-of-type {
@@ -177,7 +180,8 @@ Currently the most popular **technique** lies within **responsive web design**, 
 - **theme.css** should contain small changes on top of all other normal styling
   - Applying temporary changes, such as a holiday theme.
 
-```Reham Told me :
+```
+Reham Told me :
 1. base (reset tags like  margin badding ..)
 2. layout(grid float position display width ..)
 3. theme (color background ..  )
