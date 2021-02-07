@@ -77,10 +77,11 @@ Currently the most popular **technique** lies within **responsive web design**, 
 ### Don’t Overthink It Grids
 
 1. **Context**
-   `` <div class="grid">
-
-     <!-- 100% wide -->
-   </div>```
+   ``` 
+   <div class="grid">
+    100% wide
+   </div>
+   ```
 
 1. **Columns**
    `class="col-2-3"`
