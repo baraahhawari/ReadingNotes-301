@@ -21,7 +21,8 @@
 
 It is implemented as a method on your array instance.
 
-```let myArray = ['a', 'b', 'c'];
+```
+let myArray = ['a', 'b', 'c'];
 myArray.forEach( ... )
 It takes a callback as a parameter, which in turn receives the value and the iterator, and runs it on every element.
 
@@ -33,13 +34,15 @@ myArray.forEach( function(value, i) {
 })
 ```
 
-`// For loops let us "break" away given a condition`
-`// For loops let us "continue" (skip over an iteration) given a condition`
-`// In a function, you can return from a for loop...`
-`// In a function, you can return from a for loop...`
-`// Array.forEach is a method on an array that processes every element in the array with a callback`
-`// The callback is always given the current element's value and index in the array as args`
-`// It cannot "break", "continue" or "return"`
+```
+// For loops let us "break" away given a condition
+// For loops let us "continue" (skip over an iteration) given a condition
+// In a function, you can return from a for loop...
+// In a function, you can return from a for loop...
+// Array.forEach is a method on an array that processes every element in the array with a callback
+// The callback is always given the current element's value and index in the array as args
+// It cannot "break", "continue" or "return"
+```
 
 ## Code Challenge: 02 - Pass by value, pass by reference
 
