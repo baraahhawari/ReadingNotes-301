@@ -193,7 +193,8 @@ _**Object.entries** - Returns an array of each “Entry” as an an array with a
 - object is a data type
 - use methode to get its value
 
-```const person={
+```
+const person={
 firstName:'bebo',
 lastName:'3asal',
 age:22,
@@ -206,7 +207,8 @@ what:['aha', 'aywa']
 console.log(Object.values(person));
 ```
 
-```// the keys of the object
+```
+// the keys of the object
 <!-- the output will be ['firstName', 'lastName', 'age', 'what'] -->
 console.log(Object.keys(person));
 
