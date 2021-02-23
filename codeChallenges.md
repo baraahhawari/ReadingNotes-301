@@ -269,6 +269,11 @@ console.log( allNames);
 
 ## Code Challenge: 08 - Filter :zap:
 
+- [Filter](https://codefellows.github.io/code-301-guide/curriculum/class-08/challenges/).
+- [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+- [try](https://codefellows.github.io/code-301-guide/curriculum/class-08/challenges/DEMO.html)
+
+
 ## Code Challenge: 09 - Reduce :cyclone:
 
 - [Reduce](https://codefellows.github.io/code-301-guide/curriculum/class-09/challenges/).
