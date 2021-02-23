@@ -225,13 +225,14 @@ console.log(person[value]);
 <// the output will be array of array
 console.log(Object.entries(person));>
 
-### map for array
+## Code Challenge: 07 - map for array :grey_question:
 
 - forEach will return array
   **so if I did that**_the output will be undefiend_
   <b/c forEach runs for every element in the array and dose not return >
 
-```let names=['bebo', 'nma2', '2ns'];
+```
+let names=['bebo', 'nma2', '2ns'];
 let allNames=names.forEach((name)=>{
 <b/c forEach runs for every element in the array and doesnt return>
 <!-- undefiened -->
@@ -254,7 +255,8 @@ _so_ **map** it runs through each element in the array and does return a new arr
 
 `the difference btw map and for each that map whatever U return it will became an element of the array`
 
-```let allNames=names.map((name)=>{
+```
+let allNames=names.map((name)=>{
 return name;
 })
 <!-- the map output is always an array -->
@@ -262,7 +264,9 @@ console.log( allNames);
 <!-- the output will be ['bebo', 'nma2', '2ns'] -->
 ```
 
-## Code Challenge: 09 - Reduce
+## Code Challenge: 08 - Filter :zap:
+
+## Code Challenge: 09 - Reduce :cyclone:
 
 - [Reduce](https://codefellows.github.io/code-301-guide/curriculum/class-09/challenges/).
 - [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
