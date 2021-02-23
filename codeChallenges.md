@@ -227,9 +227,12 @@ console.log(Object.entries(person));>
 
 ## Code Challenge: 07 - map for array :grey_question:
 
-- forEach will return array
-  **so if I did that**_the output will be undefiend_
-  <b/c forEach runs for every element in the array and dose not return >
+- [MAP](https://codefellows.github.io/code-301-guide/curriculum/class-07/challenges/).
+- [video](https://www.youtube.com/playlist?list=PLVngfM2hsbi-L6G8qlWd8RyRbuTamHt3k)
+- [try](https://codefellows.github.io/code-301-guide/curriculum/class-07/challenges/DEMO.html)
+
+- whe we used forEach it returened array
+  **so if I did that**_the output will be __undefiend__ _b/c forEach runs for every element in the array and dose not return_
 
 ```
 let names=['bebo', 'nma2', '2ns'];
